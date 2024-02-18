@@ -29,12 +29,14 @@ CREATE TABLE Sedes (
     nombre VARCHAR(100),
     direccion VARCHAR(255)
 );
-
+-- tabla maestra Salones hecha por Carlos
 CREATE TABLE Salones (
     id_salón INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
     capacidad INT,
     id_sede INT,
+    horario_m VARCHAR(50),
+    nivel VARCHAR(15),
     FOREIGN KEY (id_sede) REFERENCES Sedes(id_sede)
 );
 
