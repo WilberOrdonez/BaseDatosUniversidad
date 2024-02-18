@@ -15,12 +15,14 @@ CREATE TABLE Carreras (
     id_facultad INT,
     FOREIGN KEY (id_facultad) REFERENCES Facultades(id_facultad)
 );
-
+-- tabla maestra hecha por carlos
 CREATE TABLE Maestros (
     id_maestro INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
+    email_maestro VARCHAR(25),
     apellido VARCHAR(100),
     id_facultad INT,
+    seccion VARCHAR(25),
     FOREIGN KEY (id_facultad) REFERENCES Facultades(id_facultad)
 );
 
