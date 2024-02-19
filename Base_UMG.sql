@@ -41,14 +41,14 @@ CREATE TABLE Salones (
     nivel VARCHAR(15),
     FOREIGN KEY (id_sede) REFERENCES Sedes(id_sede)
 );
-
+-- Tabla horarios hecha por Leticia
 CREATE TABLE Horarios (
     id_horario INT AUTO_INCREMENT PRIMARY KEY,
     dia_semana VARCHAR(20),
     hora_inicio TIME,
     hora_fin TIME
 );
-
+-- Tabla bancos hecha por Leticia
 CREATE TABLE Bancos (
     id_banco INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
@@ -75,7 +75,7 @@ CREATE TABLE Cursos (
     FOREIGN KEY (id_salón) REFERENCES Salones(id_salón),
     FOREIGN KEY (id_horario) REFERENCES Horarios(id_horario)
 );
-
+-- tabla notas hecha por Leticia 
 CREATE TABLE Notas (
     id_nota INT AUTO_INCREMENT PRIMARY KEY,
     id_alumno INT,
@@ -84,7 +84,7 @@ CREATE TABLE Notas (
     FOREIGN KEY (id_alumno) REFERENCES Alumnos(id_alumno),
     FOREIGN KEY (id_curso) REFERENCES Cursos(id_curso)
 );
-
+-- Tabla pagos por Leticia
 CREATE TABLE Pagos (
     id_pago INT AUTO_INCREMENT PRIMARY KEY,
     id_alumno INT,
