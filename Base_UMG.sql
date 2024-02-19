@@ -25,7 +25,7 @@ CREATE TABLE Maestros (
     seccion VARCHAR(25),
     FOREIGN KEY (id_facultad) REFERENCES Facultades(id_facultad)
 );
-
+-- Tabla Sedes hecha por Wilber
 CREATE TABLE Sedes (
     id_sede INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
@@ -55,6 +55,7 @@ CREATE TABLE Bancos (
     direccion VARCHAR(255)
 );
 
+-- Tabla Alumnos creada por Wilber
 CREATE TABLE Alumnos (
     id_alumno INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
@@ -63,7 +64,7 @@ CREATE TABLE Alumnos (
     id_carrera INT,
     FOREIGN KEY (id_carrera) REFERENCES Carreras(id_carrera)
 );
-
+-- tabla Cursos creada por Wilber
 CREATE TABLE Cursos (
     id_curso INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
